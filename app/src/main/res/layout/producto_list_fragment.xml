@@ -62,7 +62,6 @@
         android:layout_width="103dp"
         android:layout_height="0dp"
         android:hint="ValorInventario"
-        android:autoSizeMinTextSize="1px"
         app:layout_constraintBaseline_toBaselineOf="@+id/labelProductoIdTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

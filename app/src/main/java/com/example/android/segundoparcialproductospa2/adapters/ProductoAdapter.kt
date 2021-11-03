@@ -7,20 +7,22 @@ import com.example.android.segundoparcialproductospa2.databinding.ProductoRowBin
 import com.example.android.segundoparcialproductospa2.models.Producto
 
 class ProductoAdapter : RecyclerView.Adapter<ProductoAdapter.ProductoViewHolder>() {
+
+    //Variable tipo lista para almacenar los valores de la api
     private var productos = emptyList<Producto>()
+
 
     fun submitList(lista: List<Producto>){
         productos = lista
         notifyDataSetChanged()
     }
-
+    //Esta clase sirve para insertar los valores de la Api en la lista
     inner class ProductoViewHolder(val binding: ProductoRowBinding) :
         RecyclerView.ViewHolder(binding.root){
 
         fun bind(producto: Producto){
 
-            //VERDADERO BIND, no puedo usar estos campos por lo de mi cuenta de azure
-
+            //Este es el que va pero no puedo usarlo por el problema de mi cuenta de Azure
             /*binding.productoIdTextView.text = producto.productoId.toString()
             binding.descripcionTextView.text = producto.descripcion
             binding.existenciaTextView.text = producto.existencia.toString()
@@ -29,9 +31,9 @@ class ProductoAdapter : RecyclerView.Adapter<ProductoAdapter.ProductoViewHolder>
 
             binding.productoIdTextView.text = producto.travelId.toString()
             binding.descripcionTextView.text = producto.observaciones
-            binding.existenciaTextView.text = "0"
+            binding.existenciaTextView.text = "12"
             binding.costoTextView.text = producto.millas.toString()
-            binding.valorInventarioTextView.text = "0"
+            binding.valorInventarioTextView.text = "25"
         }
     }
 
